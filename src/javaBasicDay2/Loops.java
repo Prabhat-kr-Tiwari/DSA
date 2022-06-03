@@ -5,11 +5,11 @@ import java.sql.SQLOutput;
 public class Loops {
     public static void main(String[] args)
     {
-        for(int i=0;i<7;i++)
+        /*for(int i=0;i<7;i++)
         {
             System.out.println("Tiwariji"+i);
 
-        }
+        }*/
         //for infinit loop
        /* for (int i=0; ;i++)
         {
@@ -23,7 +23,7 @@ public class Loops {
             }
             System.out.println();
         }
-        int index=1;
+        /*int index=1;
         while (index<=5){
             System.out.println("prabhat");
             //index++;
@@ -33,7 +33,7 @@ public class Loops {
         do {
             System.out.println("hello");
             i++;
-        }while (i<=2);
+        }while (i<=2);*/
 
     }
 
