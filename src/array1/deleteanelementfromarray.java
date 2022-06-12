@@ -19,6 +19,7 @@ public class deleteanelementfromarray {
         {
             a[j]=a[j+1];
         }
+        //if the elemnt is deleted then return size -1
         return n-1;
     }
     public static void main(String [] args)
