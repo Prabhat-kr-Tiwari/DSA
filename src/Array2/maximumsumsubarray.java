@@ -19,6 +19,7 @@ public class maximumsumsubarray {
     }*/
     static int largestmaximumsumsubarray(int a[])
     {
+        //int end,start
         int currsum=0;
         int maxsum=Integer.MIN_VALUE;
         for (int i = 0; i < a.length; i++) {
@@ -26,10 +27,12 @@ public class maximumsumsubarray {
             if (maxsum<currsum)
             {
                 maxsum=currsum;
+                //update end
             }
             if (currsum<0)
             {
                 currsum=0;
+                //update start
             }
         }
         return  maxsum;
