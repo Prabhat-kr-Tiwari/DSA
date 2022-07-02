@@ -47,12 +47,25 @@ public class findonlynonrepeatingelementinaanarraywhereeveyotherelementrepeatstw
         }
         return -1;
     }
+    static int nonrepeatingusingxor(int a[])
+    {
+        int ans=0;
+        for (int e:a
+             ) {
+            ans=ans^e;
+
+        }
+        return ans;
+    }
+
 
 
     public static void main(String[] args) {
         int a[]={1,2,3,4,4,2,1};
 
         System.out.println(nonrepeatingelement(a));
+        System.out.println(nonrepeatingelementusinghashset(a));
+        System.out.println(nonrepeatingusingxor(a));
 
     }
 }
