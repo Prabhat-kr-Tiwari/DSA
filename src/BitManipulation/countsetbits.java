@@ -17,6 +17,9 @@ public class countsetbits {
     }
     public static void main(String[] args) {
         System.out.println(countsetBits(5));
+        int a=5;
+        int b=~a;
+        System.out.println(b);
 
     }
 }
