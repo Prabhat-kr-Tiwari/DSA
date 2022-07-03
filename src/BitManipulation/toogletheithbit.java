@@ -9,6 +9,6 @@ public class toogletheithbit {
     }
 
     public static void main(String[] args) {
-        System.out.println(Toogletheithbit(5,1));
+        System.out.println(Toogletheithbit(5,1 ));
     }
 }
