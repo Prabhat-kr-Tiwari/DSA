@@ -23,6 +23,18 @@ public class checkevenorodd {
             System.out.println("odd");
         }
     }
+    //using or operation
+    static void Checkevenoroddusingoroperation(int n)
+    {
+        if ((n|1)==n+1)
+        {
+            System.out.println("even" );
+        }
+        else {
+            System.out.println("odd");
+        }
+    }
+
 
 
 
@@ -30,6 +42,7 @@ public class checkevenorodd {
     public static void main(String[] args) {
         Checkevenorodd(244);
         Checkevenoroddusingandoperation(244);
+        Checkevenoroddusingoroperation(244);
 
     }
 }
