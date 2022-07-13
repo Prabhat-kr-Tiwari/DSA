@@ -9,7 +9,7 @@ public class smallestinthegivenarray {
     {
         int a[]={1,2,3,8,0};
 
-        Scanner sc=new
+        /*Scanner sc=new
                 Scanner(System.in);
         System.out.println("Enter the size of array");
         int n= sc.nextInt();
@@ -27,6 +27,12 @@ public class smallestinthegivenarray {
                 min=b[i];
             }
         }
-        System.out.println(min);
+        System.out.println(min);*/
+        java.util.Arrays.sort(a);
+        for (int e:a
+             ) {
+            System.out.println(e);
+
+        }
     }
 }

@@ -8,11 +8,17 @@ public class quicksort {
         a[j]=temp;
 
     }
+    static void random(int a[],int l,int h)
+    {
+        int randomIndex=l+(int )(Math.random()*(l+h-1));
+        swap(a,l,randomIndex);
+    }
     static int partition(int a[],int l,int h)
     {
         int i=l;
         int j=h;
 
+        random(a,l,h);
         int pivot=a[l];
         while (i<j)
         {
