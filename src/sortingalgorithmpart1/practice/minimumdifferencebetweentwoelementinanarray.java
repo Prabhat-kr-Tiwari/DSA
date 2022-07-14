@@ -1,4 +1,4 @@
-package String1.practice;
+package sortingalgorithmpart1.practice;
 
 import java.util.Arrays;
 
