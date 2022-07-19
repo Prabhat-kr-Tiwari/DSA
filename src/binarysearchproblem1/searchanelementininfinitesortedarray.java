@@ -3,7 +3,6 @@ package binarysearchproblem1;
 public class searchanelementininfinitesortedarray {
     static int binarysearch(int a[],int key,int l,int r)
     {
-
         while (l<=r)
         {
             int mid=l+(r-l)/2;
