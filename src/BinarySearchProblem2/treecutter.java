@@ -8,11 +8,8 @@ public class treecutter {
              {
                  total+=(a[i]-cut);
              }
-
          }
          return total>=k;
-
-
     }
     static int WoodCutterproblem(int a[],int k )
     {
@@ -21,8 +18,9 @@ public class treecutter {
         for (int e:a
              ) {
             r=Math.max(r,e);
-            
         }
+
+
         int ans=-1;
         while (l<=r){
             int mid=(l+r)/2;
