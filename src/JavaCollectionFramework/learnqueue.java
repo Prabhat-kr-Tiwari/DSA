@@ -12,9 +12,15 @@ public class learnqueue {
         queue.add(2);
         queue.add(3);
         queue.add(4);
+        System.out.println(queue.peek());
         System.out.println(queue);
         System.out.println(queue.remove());//it removes element at the head
         System.out.println(queue);
+        System.out.println(queue.remove());
+        System.out.println(queue.remove());
+        System.out.println(queue.remove());
+        //System.out.println(queue.remove());//throw wxception
+        System.out.println(queue.poll());
 
     }
 
