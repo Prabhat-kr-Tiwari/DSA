@@ -14,6 +14,8 @@ public class learnhash {
         hashSet.add(6);
         hashSet.add(89);
         hashSet.add(78);*/
+
+        ///shallow checking
         Set<student> rollcall=new HashSet<>();
         student s1=new student(1,"prabhat");
         student s2=new student(2,"prabhu");
@@ -25,8 +27,9 @@ public class learnhash {
         rollcall.add(s4);
 
         System.out.println(rollcall);
-
-
+        student s5=new student(4,"sonu");
+        rollcall.add(s5);
+        System.out.println(rollcall);
     }
 
 }
