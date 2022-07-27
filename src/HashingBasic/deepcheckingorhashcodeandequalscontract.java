@@ -2,16 +2,10 @@ package HashingBasic;
 
 import java.util.HashSet;
 import java.util.Set;
-
 public class deepcheckingorhashcodeandequalscontract {
-
-
-
     public static void main(String[] args) {
-
-
         ///Deep checking or hashcode and equals contract
-        Set<Students> rollcall=new HashSet<>();
+      /*  Set<Students> rollcall=new HashSet<>();
         Students s1= new Students(1,"prabhat");
         Students s2=new Students(2,"prabhu");
         Students s3=new Students(3,"bhat");
@@ -24,7 +18,7 @@ public class deepcheckingorhashcodeandequalscontract {
         System.out.println(rollcall);
         Students s5=new Students(4,"sonu");
         rollcall.add(s5);
-        System.out.println(rollcall);
+        System.out.println(rollcall);*/
 
        /* //if roll no are same that means student are same
         Students s1= new Students(1,"prabhat");
@@ -35,6 +29,25 @@ public class deepcheckingorhashcodeandequalscontract {
 
         //hamlogo ko isi ko override karna tha using equals method in Students class
         System.out.println(s3.equals(s1));*/
+
+
+        //1.During thr
+       /* Students s1= new Students(1,"prabhat");
+        Students s2=new Students(1,"prabhu");
+        System.out.println(s1.hashCode());
+        System.out.println(s2.hashCode());
+        System.out.println(s1.hashCode());*/
+
+        //2.
+        Students s1= new Students(1,"prabhat");
+        Students s2=new Students(1,"prabhu");
+        System.out.println(s1.equals(s2));
+        System.out.println(s1.hashCode());
+        System.out.println(s2.hashCode());
+
+
+
+        //3.
 
     }
 }
@@ -52,7 +65,7 @@ class Students {
 
     //ab dekho jis jis bande ka hashcode bane ga ab roll no ke hisab se bane ga
     // ab roll no agr doo student ka same hai toh same student nhi toh different student hai
-    @Override
+  @Override
     public int hashCode(){
         return rollNo;
     }
@@ -66,5 +79,4 @@ class Students {
         }
         return false;
     }
-
 }
