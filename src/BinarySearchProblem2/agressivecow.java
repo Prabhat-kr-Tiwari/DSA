@@ -1,5 +1,4 @@
 package BinarySearchProblem2;
-
 public class agressivecow {
     private static boolean canAccomodate(int[] a, int k, int distance) {
 
@@ -11,18 +10,10 @@ public class agressivecow {
             {
                 cows++;
                 prev=a[i];
-
             }
-
         }
         return cows>=k;
-
-
-
-
     }
-
-
     static int agressiveCow(int a[],int k)
     {
         int l=1;
@@ -45,14 +36,9 @@ public class agressivecow {
         }
         return ans;
     }
-
-
-
-
     public static void main(String[] args) {
         int a[]={1,2,4,8,9};
         int k=3;
         System.out.println(agressiveCow(a,k));
-
     }
 }
