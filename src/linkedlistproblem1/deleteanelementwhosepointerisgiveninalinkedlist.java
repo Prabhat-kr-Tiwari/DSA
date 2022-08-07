@@ -2,25 +2,17 @@ package linkedlistproblem1;
 
 import static linkedlistproblem1.printll.printLL;
 
-public class deleteinalinkedlist {
+public class deleteanelementwhosepointerisgiveninalinkedlist {
 
 
-    static Node<Integer> delete(int position,Node<Integer> head)
+    static Node<Integer> deletenode(Node<Integer>head,Node<Integer> Node_ptr)
+
     {
-        if (head==null) return null;
-        if (position==0)
-        {
-            head=head.next;
-            return head;
-
-        }
-        Node<Integer> curr=head;
-        for (int i = 0; i < position-1; i++) {
-            curr=curr.next;
-        }
-        curr.next=curr.next.next;
+        Node<Integer> temp=Node_ptr.next;
+        Node_ptr.data=temp.data;
+        Node_ptr.next=temp.next;
+        temp=null;
         return head;
-
     }
 
     public static void main(String[] args) {
@@ -38,7 +30,7 @@ public class deleteinalinkedlist {
         n4.next = n5;
         n5.next = n6;
         printLL(head);
-        head=delete(5,head);
+        head=deletenode(head,n5);
         printLL(head);
     }
 }
