@@ -17,6 +17,18 @@ public class detectaloopinalinkedlist {
 
         return null;
     }
+    static  Node<Integer>findCycleStartingNode(Node<Integer> head)
+    {
+        Node<Integer> meet=iscyclepresent(head);
+        if (meet== null) return null;
+        Node<Integer> curr=head;
+        while (curr!=meet)
+        {
+            curr=curr.next;
+            meet=meet.next;
+        }
+        return curr;
+    }
 
     public static void main(String[] args) {
        Node<Integer> n1 = new Node<>(10);
@@ -37,11 +49,14 @@ public class detectaloopinalinkedlist {
         if (meet!=null)
         {
             System.out.println("cycle present");
+            Node<Integer> firstnode=findCycleStartingNode(head);
+            System.out.println(firstnode.data);
         }
         else
         {
             System.out.println("not");
         }
+
 
     }
 
