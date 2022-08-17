@@ -4,7 +4,8 @@ public class MainClass {
 
 
     public static void main(String[] args) throws Exception {
-        stackUsingArray stack=new stackUsingArray(3);
+        /*stackUsingArray stack=new stackUsingArray(3);*/
+        stackUsingLinkedList stack=new stackUsingLinkedList();
 
         stack.push(2);
         stack.push(4);

@@ -9,7 +9,7 @@ public class insertinlinkedlist {
         }
         System.out.println(" end ");
     }
-    static class Node<T>{
+    public static class Node<T>{
         //Integer data;  for the null support
         T data;//int doesn't support null
         Node next;
