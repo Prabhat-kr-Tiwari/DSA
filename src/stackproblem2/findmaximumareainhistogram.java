@@ -54,7 +54,7 @@ public class findmaximumareainhistogram {
         int ans[]=new int[a.length];
         ArrayDeque<Integer> stack=new ArrayDeque<>();
 
-        for (int i=a.length;i>=0;i--) {
+        for (int i=a.length-1;i>=0;i--) {
             int e=a[i];
             while (!stack.isEmpty()&&a[stack.peek()]>=e)
             {
@@ -76,9 +76,30 @@ public class findmaximumareainhistogram {
 
         return ans;
     }
+    static int maximumareainhistogramoptimiseed(int a[])
+    {
+        int ps[]=previousSmaller(a);
+        int ns[]=nextSmaller(a);
+        int max=0;
+        for (int i = 0; i <a.length ; i++) {
+            int width=ns[i]-ps[i]-1;
+            int currArea=width*a[i];
+            max=Math.max(currArea,max);
+        }
+        return max;
+    }
+
     public static void main(String[] args) {
-        int a[]={4,2,1,4,3,0,2,3};
-        System.out.println(maximumareainhistogram(a));
+        int a[]={4,3,9,2,5,1,8,3};
+        int ps[]=previousSmaller(a);
+        int ns[]=nextSmaller(a);
+        //System.out.println(maximumareainhistogram(a));
+      /*  for (int e:ns
+             ) {
+            System.out.print(e+"  ");
+
+        }*/
+        System.out.println(maximumareainhistogramoptimiseed(a));
 
     }
 
