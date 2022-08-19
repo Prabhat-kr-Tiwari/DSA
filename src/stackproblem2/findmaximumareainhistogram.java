@@ -27,10 +27,10 @@ public class findmaximumareainhistogram {
     {
         int ans[]=new int[a.length];
         ArrayDeque<Integer> stack=new ArrayDeque<>();
-        int i=0;
-        for (int e:a
-        ) {
-            while (!stack.isEmpty()&&stack.peek()>=e)
+
+        for (int i=0;i<a.length;i++) {
+            int e=a[i];
+            while (!stack.isEmpty()&&a[stack.peek()]>=e)
             {
                 stack.pop();
 
@@ -42,8 +42,34 @@ public class findmaximumareainhistogram {
             else {
                 ans[i]= stack.peek();
             }
-            stack.push(e);
-            i++;
+            stack.push(i);
+
+
+        }
+
+        return ans;
+    }
+    static int[] nextSmaller(int a[])
+    {
+        int ans[]=new int[a.length];
+        ArrayDeque<Integer> stack=new ArrayDeque<>();
+
+        for (int i=0;i<a.length;i++) {
+            int e=a[i];
+            while (!stack.isEmpty()&&a[stack.peek()]>=e)
+            {
+                stack.pop();
+
+            }
+            if (stack.isEmpty())
+            {
+                ans[i]=-1;
+            }
+            else {
+                ans[i]= stack.peek();
+            }
+            stack.push(i);
+
 
         }
 
