@@ -58,6 +58,7 @@ public class findmaximumareainhistogram {
             int e=a[i];
             while (!stack.isEmpty()&&a[stack.peek()]>=e)
             {
+                //dshj
                 stack.pop();
 
             }
