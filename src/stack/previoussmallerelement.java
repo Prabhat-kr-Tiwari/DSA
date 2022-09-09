@@ -1,9 +1,7 @@
 package stack;
 
 import java.util.ArrayDeque;
-
 public class previoussmallerelement {
-
     static int[] previousSmaller(int a[])
     {
         int ans[]=new int[a.length];
@@ -14,7 +12,6 @@ public class previoussmallerelement {
             while (!stack.isEmpty()&&stack.peek()>=e)
             {
                 stack.pop();
-
             }
             if (stack.isEmpty())
             {
@@ -25,12 +22,9 @@ public class previoussmallerelement {
             }
             stack.push(e);
             i++;
-
         }
-
         return ans;
     }
-
     public static void main(String[] args) {
         int a[]={1,6,2};
         int ans[]=previousSmaller(a);

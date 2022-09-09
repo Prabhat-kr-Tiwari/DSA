@@ -8,6 +8,7 @@ public class stockbuyandsell2 {
             if(a[i]>a[i-1])
             {
                 profit+=(a[i]-a[i-1]);
+
             }
 
         }

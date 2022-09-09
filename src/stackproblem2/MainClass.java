@@ -16,6 +16,19 @@ public class MainClass {
         System.out.println(twoStacks.pop1());
         System.out.println(twoStacks.pop2());
         System.out.println(twoStacks.pop2());
+        System.out.println("min satc");
+        MinStack minStack=new MinStack();
+        minStack.push(10);
+        minStack.push(2);
+        minStack.push(1);
+        System.out.println(minStack.min());
+
+        minStack.pop();
+        minStack.push(5);
+        minStack.pop();
+        minStack.push(2);
+        System.out.println(minStack.min());
+        minStack.push(10);
     }
 
 

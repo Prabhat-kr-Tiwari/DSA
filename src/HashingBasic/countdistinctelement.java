@@ -13,7 +13,7 @@ public class countdistinctelement {
         return set.size();
     }
     public static void main(String[] args) {
-        int a[]={1,2,3,1,1,2,1,3};
+        int a[]={1,1,2};
         System.out.println(CountDistinctElement(a));
     }
 }
