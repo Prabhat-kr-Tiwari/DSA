@@ -31,11 +31,24 @@ public class isPrime {
         }
         return  true;
     }
+    static void printallPrime(int n)
+    {
+        for (int i = 0; i < n; i++) {
+            if (isPrimeNumber(i))
+            {
+                System.out.println(i);
+            }
+
+        }
+    }
+
+
     public static void main(String[] args) {
         //System.out.println(isPrimeNumber(4));
-        System.out.println(isPrimeNumberEfficient(30));
+        //System.out.println(isPrimeNumberEfficient(30));
 
         //System.out.println( isPrimeMoreEfficient(4));
+        printallPrime(100);
 
     }
 }

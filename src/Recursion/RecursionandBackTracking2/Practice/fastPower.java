@@ -10,7 +10,6 @@ public class fastPower {
             if((b&1)!=0)
             {
                 res=res*a;
-
             }
             a=a*a;
             b=b>>1;
@@ -20,6 +19,7 @@ public class fastPower {
     }
     static long fastPowerUsingModulo(long a ,long b,int n)
     {
+        //{aa, ab,bb ,ba}
         long res=1;
         while (b>0)
         {
@@ -36,7 +36,8 @@ public class fastPower {
     }
 
     public static void main(String[] args) {
-        System.out.println(fastPowerUsingModulo(27267,3,1000000007));
+        //System.out.println(fastpower(12,21));
+        System.out.println(fastPowerUsingModulo(12,21,1000000007));
     }
 
 }
