@@ -2,9 +2,9 @@ package Recursion.RecursionandBackTracking2.Practice;
 
 public class fastPower {
 
-    static int fastpower(int a ,int b)
+    static long fastpower(long a ,long b)
     {
-        int res=1;
+        long res=1;
         while (b>0)
         {
             if((b&1)!=0)
@@ -36,8 +36,8 @@ public class fastPower {
     }
 
     public static void main(String[] args) {
-        //System.out.println(fastpower(12,21));
-        System.out.println(fastPowerUsingModulo(12,21,1000000007));
+        System.out.println(fastpower(12,21));
+        System.out.println(fastPowerUsingModulo(2,2,1000000007));
     }
 
 }

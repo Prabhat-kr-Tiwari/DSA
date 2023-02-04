@@ -11,7 +11,8 @@ public class countwaystoreachnthstairs {
             return 0;
         if(nStairs==0)
             return 1;
-        return (countDistinctWayToClimbStair(nStairs-1)+countDistinctWayToClimbStair(nStairs-2));
+        return (countDistinctWayToClimbStair(nStairs-1)+
+                countDistinctWayToClimbStair(nStairs-2));
     }
 
     public static void main(String[] args) {
