@@ -41,7 +41,7 @@ public class reverseanumber {
             {
                 sum+=digit*Math.pow(10,digits-1);
             }
-            digits--;
+            //digits--;
             num=num/10;
         }
         return sum;
@@ -51,6 +51,6 @@ public class reverseanumber {
     public static void main(String[] args) {
 //        System.out.println(revNum(-20));
 //        System.out.println(revNumber2(20));
-        System.out.println(revUsingLoop(30));
+        System.out.println(revUsingLoop(1230));
     }
 }

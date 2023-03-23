@@ -6,8 +6,8 @@ public class insertionsort {
         int n=a.length;
         //1st loop 1 se run ho raha hai kyu ki maine pahla element sorted man liya hai
         for (int i = 1; i < n; i++) {
-            printArray( a);
-            System.out.println();
+            /*printArray( a);
+            System.out.println();*/
             int j = i-1;
             int temp=a[i];
             for (; j >=0 ; j--) {
@@ -27,7 +27,7 @@ public class insertionsort {
     {
         for (int e:a
         ) {
-            System.out.print(e);
+            System.out.print(e+"  ");
 
         }
     }
@@ -35,6 +35,11 @@ public class insertionsort {
     public static void main(String[] args) {
         int a[]={9,5,2,6,3,1,3};
         Insertionsort(a);
+        for (int e:a
+             ) {
+            System.out.print(e+" ");
+
+        }
 
 
     }

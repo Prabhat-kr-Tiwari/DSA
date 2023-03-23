@@ -48,12 +48,12 @@ public class bubblesort {
             System.out.println(e);
 
         }
-        optimizeBubbleSort(a);
+        /*optimizeBubbleSort(a);
         for (int e:a
              ) {
             System.out.println(e);
 
-        }
+        }*/
 
     }
 }

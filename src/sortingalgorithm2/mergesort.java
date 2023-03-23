@@ -16,7 +16,7 @@ public class mergesort {
     {
         int b[]=new int[a.length];
         int i=l;//for left subarray
-        int j=mid+1;
+        int j=mid+1;// j is for right subarray
         int k=l;// for the b array
         while (i<=mid&&j<=h)
         {
@@ -54,19 +54,14 @@ public class mergesort {
         }
         for ( i = l; i <=h; i++) {
             a[i]=b[i];
-            
         }
     }
-
     public static void main(String[] args) {
         int a[]={-2,3,4,112,1,0};
         mergeSort(a,0,a.length-1);
         for (int e:a
              ) {
             System.out.println(e);
-
         }
     }
-
-
 }
