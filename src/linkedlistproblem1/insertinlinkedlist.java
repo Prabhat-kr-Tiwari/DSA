@@ -33,7 +33,6 @@ public class insertinlinkedlist {
         newNode.next=curr.next;
         curr.next=newNode;
         return head;
-
     }
     public static void main(String[] args) {
         Node<Integer> n1 = new Node<>(10);
