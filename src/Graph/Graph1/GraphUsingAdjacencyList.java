@@ -1,4 +1,4 @@
-package Graph1;
+package Graph.Graph1;
 
 import java.util.ArrayList;
 
@@ -25,18 +25,13 @@ public class GraphUsingAdjacencyList {
         //current node pe visit kiya aur usko true mark akr diya
         visited[src]=true;
         System.out.println(src+" ");
-
         //uska kon kon sa neighbor hai agr koi bhi neighbor visited nhi hai toh usko mark kar doo true
         for ( Integer neighbor:a.get(src)) {
 
             if (!visited[neighbor]){
                 dfs(neighbor,visited);
             }
-
-
         }
-
-
     }
     public static void main(String[] args) {
         int v=4;
