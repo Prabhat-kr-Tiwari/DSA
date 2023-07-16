@@ -48,7 +48,7 @@ public class BFSUsingQueue {
     }
 
     public static void main(String[] args) {
-        int v = 8;
+        int v = 10;
         BFSUsingQueue graph = new BFSUsingQueue(v);
 
 
@@ -62,6 +62,9 @@ public class BFSUsingQueue {
         graph.addEdge(4, 5);
         graph.addEdge(5, 6);
         graph.addEdge(4, 6);
+
+
+
         boolean[] visited = new boolean[v];
 
 

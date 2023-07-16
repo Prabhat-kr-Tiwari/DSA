@@ -33,7 +33,7 @@ public class insertionsort {
     }
 
     public static void main(String[] args) {
-        int a[]={9,5,2,6,3,1,3};
+        int a[]={5,4,3,2,1};
         Insertionsort(a);
         for (int e:a
              ) {

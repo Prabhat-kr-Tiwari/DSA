@@ -26,11 +26,13 @@ public class BFSUsingQueue {
         queue.add(src);
         //as the first element come mark it as true
         visited[src]=true;
+        int count=0;
 
         while (!queue.isEmpty())
         {
             int curr=queue.poll();
             System.out.println(curr+" ");
+            count++;
             for ( Integer neighbor:a.get(curr )
                  ) {
                 if (!visited[neighbor])

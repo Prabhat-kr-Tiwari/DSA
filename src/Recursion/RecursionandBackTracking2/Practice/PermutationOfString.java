@@ -16,7 +16,7 @@ public class PermutationOfString {
         //return permute(S,0,S.length());
 
     }*/
-    static void permute(String s, int l, int r)
+    static ArrayList<String> permute(String s, int l, int r)
     {
         ArrayList<String> al=new ArrayList<>();
         if(l==r)
@@ -34,6 +34,7 @@ public class PermutationOfString {
             s=swap(s,l,i);
 
         }
+        return al;
 
 
     }
@@ -53,7 +54,9 @@ public class PermutationOfString {
     }
 
     public static void main(String[] args) {
-       // System.out.println(permute("ABC",0,2));
+        String s="ABC";
+        System.out.println(permute(s,0,2));
+
 
 
 

@@ -55,17 +55,17 @@ public class DFSUsingStack {
     }
 
     public static void main(String[] args) {
-        int v=5;
-        DFSUsingStack dfsUsingStack=new DFSUsingStack(v);
+        int v = 5;
+        DFSUsingStack dfsUsingStack = new DFSUsingStack(v);
 
 
-        dfsUsingStack.addEdge(0,1);
-        dfsUsingStack.addEdge(4,3);
-        dfsUsingStack.addEdge(0,4);
-        dfsUsingStack.addEdge(4,2);
+        dfsUsingStack.addEdge(0, 1);
+        dfsUsingStack.addEdge(4, 3);
+        dfsUsingStack.addEdge(0, 4);
+        dfsUsingStack.addEdge(4, 2);
 
-        boolean[] visited =new boolean[v];
-        dfs(0,visited);
+        boolean[] visited = new boolean[v];
+        dfs(0, visited);
     }
 
 }
