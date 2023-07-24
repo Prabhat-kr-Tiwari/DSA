@@ -29,7 +29,7 @@ public class sumarraywithzerosum {
     }
 
     public static void main(String[] args) {
-        int a[]={10,-10};
+        int a[]={2,3,1,-4,4,-2};
         System.out.println(subarraywithzerosum(a));
     }
 }
