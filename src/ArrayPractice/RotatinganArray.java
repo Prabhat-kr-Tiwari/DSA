@@ -7,8 +7,11 @@ public class RotatinganArray {
     static void rightRotate(int[] arr, int n, int d) {
         // code here
 
+        int x=0;
         int[] a = new int[n];
         for (int i = 0; i < n; i++) {
+            x=((i+n-n/2-1)%n);
+            System.out.println("X   :"+x);
             a[(i + d) % n] = arr[i];
         }
         for (int e : a
@@ -115,7 +118,7 @@ public class RotatinganArray {
         //Output: 3 4 5 6 7 1 2
        // leftRotate(Arr, Arr.length, D);
 
-        leftr(Arr, Arr.length, D);
+        rightRotate(Arr, Arr.length, D);
 
 
     }

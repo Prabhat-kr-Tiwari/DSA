@@ -57,9 +57,9 @@ public class fibonacciseries {
 
     public static void main(String[] args) {
         //System.out.println(fib(6));
-        //print(6);
-        //System.out.println(printUsingRecursion(6));
-        pr(5);
+        print(6);
+      //  System.out.println(printUsingRecursion(6));
+        //fib(5);
 
     }
 }

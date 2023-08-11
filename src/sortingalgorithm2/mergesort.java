@@ -2,6 +2,8 @@ package sortingalgorithm2;
 
 public class mergesort {
 
+    static int inversions=0;
+
     static void mergeSort(int a[],int l,int h)
     {
         if (l<h)
@@ -14,6 +16,7 @@ public class mergesort {
     }
     static void merge(int a[],int l,int mid,int h)
     {
+
         int b[]=new int[a.length];
         int i=l;//for left subarray
         int j=mid+1;// j is for right subarray
@@ -25,8 +28,11 @@ public class mergesort {
                 b[k]=a[i];
                 i++;
             }else {
+
                 b[k]=a[j];
                 j++;
+                inversions += (mid - i + 1);
+
             }
             k++;
         }
@@ -55,13 +61,16 @@ public class mergesort {
         for ( i = l; i <=h; i++) {
             a[i]=b[i];
         }
+
     }
     public static void main(String[] args) {
-        int a[]={6, 0, 3, 5};
+        int a[]={2, 3, 4, 5, 6};
         mergeSort(a,0,a.length-1);
         for (int e:a
              ) {
             System.out.println(e);
         }
+        System.out.println("inversion"+inversions);
+
     }
 }
