@@ -4,43 +4,32 @@ import java.util.Arrays;
 
 public class Rotation {
 
-    static int rightrotate(int[] ar, int k){
-       // System.out.println(Arrays.toString(ar));
-        int b[]=new int[ar.length];
-        for (int i = 0; i <ar.length ; i++) {
-            b[i]=ar[i];
-        }
 
-        Arrays.sort(b);
-       // System.out.println(Arrays.toString(ar));
+    static int findKRotation(int[] arr, int n) {
+        int low = 0, high = n - 1;
 
-        int n=ar.length;
-        int count=0;
-        int[] a = new int[n];
-        int d=1;
-        while (d!=n){
-            for (int i = 0; i < a.length; i++) {
-                a[(i+d+n)%n]=b[i];
-//                System.out.println(Arrays.toString(a));
-
+        while (low <= high) {
+            if (arr[low] <= arr[high]) {
+                return low;  // Array is not rotated
             }
-//            System.out.println(Arrays.toString(a));
-            for (int e:a
-                 ) {
-                System.out.print(e);
 
-            }
-            System.out.println();
-            d++;
-            count++;
-            if (Arrays.equals(a, ar)){
-                return count;
+            int mid = low + (high - low) / 2;
+            int next = (mid + 1) % n;
+            int prev = (mid + n - 1) % n;
 
+            if (arr[mid] <= arr[next] && arr[mid] <= arr[prev]) {
+                return mid;  // Index of the smallest element
+            } else if (arr[mid] <= arr[high]) {
+                high = mid - 1;
+            } else if (arr[mid] >= arr[low]) {
+                low = mid + 1;
             }
         }
 
-        return -1;
+        return -1;  // Not a valid rotated array
     }
+
+
     static void leftRotate(int[] arr, int n, int d) {
         // code here
 
@@ -49,29 +38,17 @@ public class Rotation {
             a[(i + d + n) % n] = arr[i];
             System.out.println(Arrays.toString(a));
         }
-//        arr=a;
-//        for (int e : arr) {
-//            System.out.println(e);
-//        }
-//        System.out.println();
+
     }
 
-//    int findKRotation(int arr[], int n) {
-//        // code here
-//
-//    }
 
     public static void main(String[] args) {
 
         int N = 5;
         int Arr[] = {5, 1, 2, 3, 4};
-        int a[]={1,2,3,4,5};
-        System.out.println(rightrotate(Arr,1));
-//        for (int e:a
-//             ) {
-//
-//            System.out.println(e);
-//        }
+        int a[] = {1, 2, 3, 4, 5};
+        System.out.println(findKRotation(Arr, N));
+
 
     }
 }

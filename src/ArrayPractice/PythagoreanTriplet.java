@@ -1,6 +1,7 @@
 package ArrayPractice;
 
 import java.security.KeyStore;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -81,6 +82,36 @@ public class PythagoreanTriplet {
         }
     }
 
+    static boolean isTriplet(int a[]){
+        for (int i = 0; i <a.length ; i++) {
+            a[i]=a[i]*a[i];
+
+        }
+        Arrays.sort(a);
+        int n=a.length;
+        for (int i = n-1; i >=0 ; i--) {
+
+            int l=0;
+            int r=n-1;
+            while (l<r){
+                if(a[l]+a[r]==a[i]){
+                    System.out.println(a[l]);
+                    System.out.println(a[r]);
+                    System.out.println(a[i]);
+                    return true;
+                } else if (a[l]+a[r]<a[i]) {
+                    l++;
+
+                }else {
+                    r--;
+                }
+
+            }
+
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
 
         /*Input:
@@ -97,13 +128,15 @@ triplet (a, b, c) that satisfies a2 + b2 = c2, otherwise false.*/
         int a[]={1,3,0,2,7,6};
        int b[]={93 ,39 ,80 ,91 ,58 ,59 ,92 ,16 ,89, 57, 12 ,3 ,35 ,73 ,56 ,29 ,47 ,63 ,87};
         //System.out.println(checkTriplet(b, b.length));
-        bubble(a,a.length);
-        for (int w:a
-             ) {
-            System.out.println(w);
+//        bubble(a,a.length);
+//        for (int w:a
+//             ) {
+//            System.out.println(w);
+//
+//        }
 
-        }
-
+        int c[]={3,1,4,6,5};
+        System.out.println(isTriplet(c));
 
 
 

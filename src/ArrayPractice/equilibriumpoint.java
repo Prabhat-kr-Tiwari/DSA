@@ -5,8 +5,8 @@ public class equilibriumpoint {
         int n = a.length;
         int sum = 0;
         int leftsum = 0;
-        for (int i = 0; i < n; i++) {
-            sum += a[i];
+        for (int j : a) {
+            sum += j;
         }
         for (int i = 0; i < n; i++) {
             sum -= a[i];
@@ -14,6 +14,24 @@ public class equilibriumpoint {
                 return i;
             }
             leftsum += a[i];
+
+        }
+        return -1;
+    }
+
+    static int equii(int a[]){
+        int sum = 0,lefsum=0;
+        for (int e:a
+             ) {
+
+            sum+=e;
+        }
+        for (int i = 0; i <a.length ; i++) {
+            sum-=a[i];
+            if (sum==lefsum){
+                return i;
+            }
+            lefsum+=a[i];
 
         }
         return -1;
@@ -66,7 +84,7 @@ public class equilibriumpoint {
         int a[] = {1, 3, 5, 2, 2};
         int []b={4, 42, 27 ,16 ,28 ,3 ,4, 5, 9, 3, 31, 5, 5, 29, 10, 18, 35, 35, 33, 19, 41, 23, 8 ,32, 9, 5, 8, 18, 35, 13, 6, 7, 6, 10, 11, 13, 37, 2, 25, 7, 28, 43};
         //System.out.println(equi(a));
-        System.out.println(equilibriumPoint(b, b.length));
+        System.out.println(equii(a));
 
     }
 }
