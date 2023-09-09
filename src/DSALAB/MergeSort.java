@@ -5,9 +5,9 @@ public class MergeSort {
 
     static void merge(int a[], int l, int mid, int h) {
         int b[] = new int[a.length];
-        int i = l;
-        int j = mid + 1;
-        int k = l;
+        int i = l;//for left subarray
+        int j = mid + 1;// for right sub array
+        int k = l;// for b array
         while (i <= mid && j <= h) {
 
             if (a[i] <= a[j]) {

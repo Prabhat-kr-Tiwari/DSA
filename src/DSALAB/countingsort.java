@@ -1,8 +1,6 @@
 package DSALAB;
 
-import java.util.Arrays;
-
-public class radixsort {
+public class countingsort {
 
     static int findMax(int a[]){
         int max=Integer.MIN_VALUE;
@@ -14,15 +12,40 @@ public class radixsort {
         }
         return max;
     }
-    static void countSort(int a[],int place){
+    static void basicCountingSort(int a[]){//2 4 2 2
+        //find the largest element of array
+        int max=findMax(a);
+        int []count=new int[max+1];
+        for (int i = 0; i <a.length ; i++) {
+            count[a[i]]++;
+
+        }
+       int k=0;
+        for (int i = 0; i < count.length ; i++) {
+            for (int j = 0; j < count[i]; j++) {
+                a[k++]=i;
+
+            }
+
+        }
+
+    }
+    static void display(int a[]){
+        for (int e:a
+             ) {
+
+            System.out.println(e);
+        }
+    }
+
+    static void countSort(int a[]){
         int n=a.length;
         int output[]=new int[n];
         //find the largest element of array
         int max=findMax(a);
-        int []count=new int[10];
-        for (int i = 0; i <a.length ; i++) {//make frequency array of that digit a[]=105
-            //fre[5]++
-            count[(a[i]/place)%10]++;
+        int []count=new int[max+1];
+        for (int i = 0; i <a.length ; i++) {
+             count[a[i]]++;
 
         }
         //make prefix sum array of count array
@@ -34,9 +57,9 @@ public class radixsort {
         //int the original and put in the output array
         for (int i = n-1; i >=0 ;i--) {
 
-            int index=count[(a[i]/place)%10]-1;
+            int index=count[a[i]]-1;
             output[index]=a[i];
-            count[(a[i]/place)%10]--;
+            count[a[i]]--;
 
 
         }
@@ -49,24 +72,12 @@ public class radixsort {
 
 
     }
-    static void RadixSort(int a[]){
-        int max=findMax(a);
-        //app;y counting sort tot sort elements based on place value
-        for (int place = 1; max/place >0 ; place*=10) {
-            countSort(a,place);
 
-        }
-    }
 
 
     public static void main(String[] args) {
-        int a[] = {237, 146, 259, 348, 152, 163, 235, 48, 36, 62};
-
-        RadixSort(a);
-        for (int e:a
-             ) {
-            System.out.println(e) ;
-
-        }
+        int a[]={1,4,5,2,2,5,0,12};
+        countSort(a);
+        display(a);
     }
 }
