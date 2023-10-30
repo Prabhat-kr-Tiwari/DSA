@@ -5,7 +5,23 @@ class Main
 {
     public static void main (String[] args)
     {
-        int arr1[] = {1, 2, 6, 3, 7};
+        String name="Akash";
+        char chararray []=name.toCharArray();
+        System.out.println(chararray);
+        System.out.println(chararray[2]);
+        StringBuilder newname= new StringBuilder();
+        for (char a:chararray
+             ) {
+            if(a!='a'){
+                newname.append(a);
+
+
+            }
+            //System.out.println(a[2]);
+
+        }
+        System.out.println(newname);
+        /*int arr1[] = {1, 2, 6, 3, 7};
         int arr2[] = {10, 7, 45, 3, 7};
         int n = arr1.length;
 
@@ -46,6 +62,7 @@ class Main
             product += arr1[i]*arr2[i];
 
         System.out.println();
-        System.out.print(product);
+        System.out.print(product);*/
     }
+
 }
