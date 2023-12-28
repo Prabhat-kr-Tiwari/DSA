@@ -17,6 +17,12 @@ public class selectionssort {
                 
             }
             swap(a,min,i);
+            for (int e:a
+                 ) {
+                System.out.print(e);
+
+            }
+            System.out.println();
             
         }
     }
@@ -24,10 +30,10 @@ public class selectionssort {
     public static void main(String[] args) {
         int a[]={1,3,1,8,9};
         Selectionsort(a);
-        for (int e:a
+        /*for (int e:a
              ) {
             System.out.println(e);
 
-        }
+        }*/
     }
 }
