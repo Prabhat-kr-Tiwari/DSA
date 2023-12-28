@@ -6,8 +6,6 @@ import java.util.Comparator;
 
 public  class JobSequencingProblem {
 
-
-
     static class Job {
         int id, profit, deadline;
 
