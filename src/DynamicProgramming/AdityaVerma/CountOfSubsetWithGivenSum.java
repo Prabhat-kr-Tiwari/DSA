@@ -41,6 +41,8 @@ public class CountOfSubsetWithGivenSum {
     public static void main(String[] args) {
         int a[]={2,3,5,6,8,10};
         int sum=10;
-        System.out.println(subsetSum(a,a.length,sum));;
+        int b[]={3,5,10};
+        int s=10;
+        System.out.println(subsetSum(b,b.length,s));;
     }
 }

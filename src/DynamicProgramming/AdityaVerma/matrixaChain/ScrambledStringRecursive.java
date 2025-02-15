@@ -13,10 +13,18 @@ public class ScrambledStringRecursive {
 
         // Recursively check for each split
         for (int i = 1; i <= n - 1; i++) {
-            System.out.println("a.substring(0,i)  "+a.substring(0,i));
-            System.out.println("a.substring(n-i) "+a.substring(n-i));
-            System.out.println("a.substring(i) "+a.substring(i));
-            System.out.println("a.substring(0,n-i)"+a.substring(0,n-i));
+            System.out.println("i"+i);
+            if(i==2){
+                System.out.println("a.substring(0,i)  "+a.substring(0,i));
+                System.out.println("b.substring(n - i)  "+b.substring(n - i));
+                System.out.println("a.substring(i) "+a.substring(i));
+                System.out.println(" b.substring(0, n - i) "+ b.substring(0, n - i));
+                System.out.println("a.substring(0, i) "+a.substring(0, i));
+                System.out.println("b.substring(0, i)"+b.substring(0, i));
+                System.out.println("a.substring(i)"+a.substring(i));
+                System.out.println("b.substring(i)"+b.substring(i));
+            }
+
             // Check if swapping or no-swapping gives scrambled match
             if ((scrambledString(a.substring(0, i), b.substring(n - i)) &&
                     scrambledString(a.substring(i), b.substring(0, n - i))) ||

@@ -3,7 +3,7 @@ public class test {
 }
 class Main
 {
-    public static void main (String[] args)
+ /*   public static void main (String[] args)
     {
         String name="Akash";
         char chararray []=name.toCharArray();
@@ -21,7 +21,7 @@ class Main
 
         }
         System.out.println(newname);
-        /*int arr1[] = {1, 2, 6, 3, 7};
+        *//*int arr1[] = {1, 2, 6, 3, 7};
         int arr2[] = {10, 7, 45, 3, 7};
         int n = arr1.length;
 
@@ -62,7 +62,21 @@ class Main
             product += arr1[i]*arr2[i];
 
         System.out.println();
-        System.out.print(product);*/
+        System.out.print(product);*//*
+    }*/
+
+
+    static void s(String s){
+        int max=Integer.MIN_VALUE;
+        //Hello apple pie
+        for (int i = 0; i <s.length() ; i++) {
+            if (s.charAt(i)==' '){
+
+            }
+        }
+    }
+    public static void main(String[] args) {
+
     }
 
 }
