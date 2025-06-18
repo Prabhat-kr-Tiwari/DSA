@@ -133,6 +133,8 @@ public class Trie {
 
 
 
+
+
     public static void main(String[] args) {
         Trie trie = new Trie();
         String[] dict = {"apple", "car", "abc","abcd", "app"};
@@ -142,5 +144,12 @@ public class Trie {
         System.out.println(trie.search("abc"));
         trie.delete("abc");
         System.out.println(trie.search("abc"));
+        int count=0;
+        for (String word : dict) {
+            if (trie.isPrefix("ab") && word.startsWith("ab")) {
+                count++;
+            }
+        }
+        System.out.println(count);
     }
 }
