@@ -16,6 +16,7 @@ public class minCoins {
             System.out.print(e+"  ");
 
         }
+        System.out.println("result");
         return dp[n];
     }
 

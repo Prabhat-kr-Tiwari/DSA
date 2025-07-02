@@ -34,6 +34,7 @@ public class CoinChangeMinimumNoWays {
             }
         }
         t[0][0]=Integer.MAX_VALUE-1;
+        //printing-----------------------------
         for (int i = 0; i <=n ; i++) {
             for (int j = 0; j <=sum ; j++) {
                 System.out.print(t[i][j]+" ");
