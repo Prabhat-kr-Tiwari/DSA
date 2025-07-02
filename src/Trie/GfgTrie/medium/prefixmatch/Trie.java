@@ -71,6 +71,17 @@ public class Trie {
         return trie.countPrefix(prefix);
     }
 
+    public static int prefixCount(String[] words, String pref) {
+        Trie trie = new Trie();
+        for (String word : words) {
+                trie.insert(word);
+
+        }
+
+        return trie.countPrefix(pref);
+
+    }
+
     public static void main(String[] args) {
       /*  String[] arr = {"abba", "abbb", "abbc", "abbd", "abaa", "abca"};
         String str = "abbg";
@@ -85,6 +96,9 @@ public class Trie {
         String arr[] = {"a", "b", "c", "ab", "bc", "abc"};
         String str = "abc";
 
-        System.out.println(klengthpref(arr, arr.length, 6, str)); // Output: 4
+       String [] words = {"leetcode","win","loops","success"};
+        String pref = "code";
+//        System.out.println(klengthpref(arr, arr.length, 6, str)); // Output: 4
+        System.out.println(prefixCount(words,pref));
     }
 }
