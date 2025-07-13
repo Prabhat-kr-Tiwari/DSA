@@ -68,6 +68,7 @@ public class Trie {
     public static void main(String[] args) {
         Trie trie = new Trie();
         int[] arr = {1,2,3,4};
-        System.out.println("Max XOR Subarray: " + trie.maximumXORSubArray(arr));
+        int a [] = {3,10,5,25,2,8};
+        System.out.println("Max XOR Subarray: " + trie.maximumXORSubArray(a));
     }
 }
