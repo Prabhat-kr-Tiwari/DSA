@@ -83,9 +83,9 @@ public class Trie {
     }
 
     public static void main(String[] args) {
-      /*  String[] arr = {"abba", "abbb", "abbc", "abbd", "abaa", "abca"};
+        String[] arr = {"abba", "abbb", "abbc", "abbd", "abaa", "abca"};
         String str = "abbg";
-        int k = 3;*/
+        int k = 3;
 
     /*    String[] arr = {"geeks", "geeksforgeeks", "forgeeks"};
 
@@ -93,12 +93,12 @@ public class Trie {
         int k = 5;
 */
 
-        String arr[] = {"a", "b", "c", "ab", "bc", "abc"};
-        String str = "abc";
+       /* String arr[] = {"a", "b", "c", "ab", "bc", "abc"};
+        String str = "abc";*/
 
        String [] words = {"leetcode","win","loops","success"};
         String pref = "code";
-//        System.out.println(klengthpref(arr, arr.length, 6, str)); // Output: 4
-        System.out.println(prefixCount(words,pref));
+        System.out.println(klengthpref(arr, arr.length, 6, str)); // Output: 4
+//        System.out.println(prefixCount(arr,str));
     }
 }

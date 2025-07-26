@@ -60,6 +60,8 @@ public class Trie {
             return true;
         }
         for (int i = 1; i <= s.length(); i++) {
+//            System.out.println("0  "+s.substring(0,i));
+//            System.out.println("- "+s.substring(i));
             if (t.search(s.substring(0,i)) && wordBreakUtil(s.substring(i), t)) {
                 return true;
             }
@@ -121,12 +123,15 @@ public class Trie {
       String[]  B = { "i", "like", "sam", "sung", "samsung",
                 "mobile","ice","cream", "icecream", "man",
                 "go", "mango" };
+      String [] C ={"i", "like", "gfg"};
         ArrayList<String> s = new ArrayList<>(Arrays.asList(B));
 
       String A = "ilike";
       Set<String > set = new HashSet<>();
-//        Collections.addAll(set, B);
+        Collections.addAll(set, C);
+//        System.out.println(set);
 //        System.out.println(canSegmentString(A,set));
+//        System.out.println("ilike".substring(1));
         System.out.println(wordBreak(A,s));
     }
 }
