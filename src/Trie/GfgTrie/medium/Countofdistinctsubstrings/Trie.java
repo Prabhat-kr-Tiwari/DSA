@@ -22,12 +22,12 @@ public class Trie {
             children = new HashMap<>();
         }
     }
-    int count(String s){
-        TrieNode root  = new TrieNode();
+    public  int countDistinctSubstring(String s) {
+        // your code here
         int count =0;
         for (int i = 0; i < s.length(); i++) {
             TrieNode currnode =root;
-            for (int j = i; j >=0 ; j--) {
+            for (int j = i; j < s.length(); j++) {
                 char letter  = s.charAt(j);
                 if (!currnode.children.containsKey(letter)){
                     currnode.children.put(letter,new TrieNode());
@@ -38,7 +38,6 @@ public class Trie {
 
         }
         return count+1;
-
     }
 
     static  int countDistinctSubString(String s){
@@ -46,9 +45,8 @@ public class Trie {
         for (int i = 0; i <s.length(); i++) {
             StringBuilder currstring = new StringBuilder();
             for (int j = i; j <s.length() ; j++) {
-
-                currstring.append(s.charAt(i));
-                stringHashSet.add(String.valueOf(currstring));
+                currstring.append(s.charAt(j));
+                stringHashSet.add(currstring.toString());
             }
         }
         return stringHashSet.size()+1;
@@ -57,7 +55,9 @@ public class Trie {
     public static void main(String[] args) {
 
         //8
-        System.out.println(countDistinctSubString("abab"));
+        Trie  t =  new Trie();
+        System.out.println(t.countDistinctSubstring("ababa"));
+        System.out.println(countDistinctSubString("ab"));
         System.out.println();
     }
 }

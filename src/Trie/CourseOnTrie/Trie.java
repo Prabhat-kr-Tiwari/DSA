@@ -93,7 +93,8 @@ public class Trie {
             curr = curr.children.get(letter);
 
         }
-        //remove node
+        if(!curr.isEndOfWord) return false;
+         //remove node
         if (curr.children.isEmpty()) {
             nodeToDelete.children.remove(charToDelete);
 

@@ -11,7 +11,7 @@ class Solution {
         root = new TrieNode();
     }
 
-    public class TrieNode {
+    public  class TrieNode {
         Map<Integer, TrieNode> children;
 
         public TrieNode() {
@@ -19,7 +19,7 @@ class Solution {
         }
     }
 
-    void insert(int num) {
+     void insert(int num) {
         TrieNode curr = root;
         for (int i = 31; i >= 0; i--) {
             int bit = (num >> i) & 1;
@@ -28,7 +28,7 @@ class Solution {
         }
     }
 
-    int getMaxXOR(int num) {
+     int getMaxXOR(int num) {
         TrieNode curr = root;
         int maxXor = 0;
         for (int i = 31; i >= 0; i--) {
@@ -44,7 +44,7 @@ class Solution {
         return maxXor;
     }
 
-    public int findMaximumXOR(int[] nums) {
+    public  int findMaximumXOR(int[] nums) {
         int maxXor = 0;
         for (int num : nums) {
             insert(num); // insert all elements first
@@ -55,6 +55,13 @@ class Solution {
         }
 
         return maxXor;
+    }
+
+    public static void main(String[] args) {
+       int a[] ={ 3,10,5,25,2,8};
+       Solution s = new Solution();
+
+        System.out.println(s.findMaximumXOR(a));
     }
 }
 
@@ -85,7 +92,7 @@ class NewSolution {
             int bit = (num >> i) & 1;
             int toggledBit = 1 - bit;
             if (node.children[toggledBit] != null) {
-                maxXor |= (1 << i);
+                maxXor |= (1 << i);//xor
                 node = node.children[toggledBit];
             } else {
                 node = node.children[bit];
@@ -108,6 +115,13 @@ class NewSolution {
         }
 
         return maxXor;
+    }
+
+    public static void main(String[] args) {
+        int a[] ={ 3,10,5,25,2,8};
+        NewSolution s = new NewSolution();
+
+        System.out.println(s.findMaximumXOR(a));
     }
 }
 
