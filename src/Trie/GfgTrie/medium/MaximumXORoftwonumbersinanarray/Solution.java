@@ -117,10 +117,24 @@ class NewSolution {
         return maxXor;
     }
 
+    //brute force
+   static int maxxor(int a[]){
+        int maxxor= 0;
+        for (int i = 0; i < a.length; i++) {
+            for (int j = 0; j < a.length; j++) {
+                maxxor = Math.max(maxxor,a[i]^a[j]);
+            }
+        }
+        return maxxor;
+    }
+
     public static void main(String[] args) {
         int a[] ={ 3,10,5,25,2,8};
+        int b[] ={ 25,10,2,8,5,3};
         NewSolution s = new NewSolution();
 
+
+        System.out.println(maxxor(b));
         System.out.println(s.findMaximumXOR(a));
     }
 }

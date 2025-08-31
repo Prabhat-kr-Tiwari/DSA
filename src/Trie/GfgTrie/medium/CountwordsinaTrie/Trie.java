@@ -42,9 +42,11 @@ public class Trie {
 
         if (root.isEndOfWord) {
             count += root.freq;
+            System.out.println("isend of word  count="+count);
         }
         for (TrieNode child : root.children.values()) {
             count += wordCount(child);
+            System.out.println("for loop count ="+count);
         }
         return count;
 
