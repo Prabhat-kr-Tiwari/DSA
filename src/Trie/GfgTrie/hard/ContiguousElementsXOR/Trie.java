@@ -1,4 +1,4 @@
-package Trie.GfgTrie.medium.maximumxorsubarray;
+package Trie.GfgTrie.hard.ContiguousElementsXOR;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,7 +13,7 @@ public class Trie {
 
 
     public class  TrieNode{
-        Map<Integer,TrieNode > children;
+        Map<Integer, TrieNode> children;
         boolean isEndOfWord;
 
 
@@ -25,7 +25,7 @@ public class Trie {
     }
     // Insert 32-bit representation of number into Trie
     void insert(int num) {
-        TrieNode curr = root;
+      TrieNode curr = root;
         for (int i = 31; i >= 0; i--) {
             int bit = (num >> i) & 1;
             curr.children.putIfAbsent(bit, new TrieNode());
@@ -35,7 +35,7 @@ public class Trie {
 
     // Search maximum XOR for given number with all numbers in the Trie
     int getMaxXOR(int num) {
-        TrieNode curr = root;
+      TrieNode curr = root;
         int maxXor = 0;
         for (int i = 31; i >= 0; i--) {
             int bit = (num >> i) & 1;
@@ -65,14 +65,27 @@ public class Trie {
 
         return maxXor;
     }
+
+    static int maxSubarrayXOR(int arr[], int n) {
+        // Your code here
+        int max = Integer.MIN_VALUE;
+
+        // Consider all subarrays arr[i..j]
+        for (int i = 0; i < n; i++) {
+            int currXor = 0; // reset for new subarray starting at i
+            for (int j = i; j < n; j++) {
+                currXor ^= arr[j]; // XOR of arr[i..j]
+                max = Math.max(max, currXor);
+            }
+        }
+
+        return max;
+
+    }
     public static void main(String[] args) {
-        Trie trie = new Trie();
-        int[] arr = {1,2,3,4};
-        int a [] = {3,10,5,25,2,8};
-       int  ar[] = {8,1,2,12};
-      int   rr[] = {1,2,3,4};
 
-
-        System.out.println("Max XOR Subarray: " + trie.maximumXORSubArray(rr));
+       int  N = 4;
+        int arr[] = {8,1,2,12};
+        System.out.println(maxSubarrayXOR(arr,N));
     }
 }
