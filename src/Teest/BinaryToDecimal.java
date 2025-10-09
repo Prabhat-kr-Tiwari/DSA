@@ -10,8 +10,11 @@ public class BinaryToDecimal {
         int i =0;
         while (num!=0){
             int digit = num&1;
+            System.out.println("digit  "+digit);
             ans = (int) ((digit*Math.pow(10,i))+ans);
+            System.out.println("ans  "+ans);
             num= num>>1;
+            System.out.println("num  "+num);
             i++;
 
         }

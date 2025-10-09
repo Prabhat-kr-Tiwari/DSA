@@ -19,6 +19,7 @@ public class Minimumnumberofjumps {
         //System.out.println(i);
         System.out.println(count);
     }*/
+    //ayushi sharma video
     static int minJumps(int[] arr){
         // your code here
         if (arr.length<=1){
@@ -37,13 +38,18 @@ public class Minimumnumberofjumps {
                 return jumps;
             }
             maxReach=Math.max(maxReach,i+arr[i]);
+            System.out.println("maxReach  "+maxReach);
+            System.out.println("steps  "+steps);
             steps--;
+            System.out.println("steps--  "+steps);
             if (steps==0){
+                System.out.println("steps0  "+steps);
                 jumps++;
                 if(i>=maxReach){
                     return -1;
                 }
                 steps=maxReach-i;
+                System.out.println("steps=maxReach-i; "+steps);
             }
 
         }
